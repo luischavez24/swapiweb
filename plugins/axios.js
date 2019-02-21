@@ -1,4 +1,4 @@
-import Planets from '../api/planets.api'
+import Planets from '../api/planets'
 
 export default function(ctx, inject) {
   if (!ctx.$axios) {
