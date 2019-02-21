@@ -1,5 +1,5 @@
 <template>
-  <v-card class="round-card">
+  <v-card class="elevation-4 round-card">
     <v-card-title>
       <h1>{{ planet.name }}</h1>
     </v-card-title>
