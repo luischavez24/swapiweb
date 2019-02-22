@@ -1,3 +1,6 @@
+import { SET_PLANETS } from '../util/mutations-types'
+import { FETCH_PLANETS } from '../util/actions-types'
+
 export const state = () => ({
   planets: {
     results: [],
@@ -12,13 +15,13 @@ export const getters = {
 }
 
 export const mutations = {
-  setPlanets(state, planets) {
+  [SET_PLANETS](state, planets) {
     state.planets = planets;
   }
 }
 
 export const actions = {
-  async fetchPlanets ({ commit, error }, { page }) {
+  async [FETCH_PLANETS] ({ commit, error }, { page }) {
     
     commit('setPlanets', await this.$planets.getPlanets(page || 1))
   }

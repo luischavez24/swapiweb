@@ -19,6 +19,7 @@
 <script>
 import menus from './toolbar.items'
 import MenuEntry from '../components/MenuEntry'
+import { CHARGE_CURRENT_PAGE_DATA } from '../util/actions-types';
 
 export default {
   data() {
@@ -30,7 +31,7 @@ export default {
     MenuEntry
   },
   fetch({ store }) {
-    store.dispatch('chargeCurrentPageData', { title: 'Swapi' })
+    store.dispatch(CHARGE_CURRENT_PAGE_DATA, { title: 'Swapi' })
   }
 }
 </script>

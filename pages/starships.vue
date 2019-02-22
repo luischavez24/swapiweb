@@ -23,6 +23,7 @@
 <script>
 import Starship from '../components/Starship'
 import { mapState, mapGetters } from 'vuex'
+import { FETCH_STARSHIPS, CHARGE_CURRENT_PAGE_DATA } from '../util/actions-types';
 export default {
   data() {
     return {
@@ -42,12 +43,12 @@ export default {
   },
   methods: {
     chargeStarships() {
-      this.$store.dispatch('starships/fetchStarships', { page: this.currentPage })
+      this.$store.dispatch(`starships/${FETCH_STARSHIPS}`, { page: this.currentPage })
     }
   },
   fetch({ store }) {
-    store.dispatch('chargeCurrentPageData', { title: 'Naves' })
-    store.dispatch('starships/fetchStarships', {})
+    store.dispatch(CHARGE_CURRENT_PAGE_DATA, { title: 'Naves' })
+    store.dispatch(`starships/${FETCH_STARSHIPS}`, {})
   }
 }
 </script>

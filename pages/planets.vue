@@ -22,6 +22,8 @@
 <script>
 import Planet from '../components/Planet'
 import { mapActions, mapGetters, mapState } from 'vuex'
+import { FETCH_PLANETS, CHARGE_CURRENT_PAGE_DATA } from '../util/actions-types'
+
 export default {
   components: {
     Planet
@@ -41,15 +43,15 @@ export default {
   },
   methods: {
     ...mapActions('planets', [
-      'fetchPlanets'
+      FETCH_PLANETS
     ]),
     chargePlanets() {
       this.fetchPlanets({ page: this.currentPage })
     }
   },
   fetch({ store, error }) {
-    store.dispatch('chargeCurrentPageData', { title: 'Planetas' })
-    store.dispatch('planets/fetchPlanets', {})
+    store.dispatch(CHARGE_CURRENT_PAGE_DATA, { title: 'Planetas' })
+    store.dispatch(`planets/${FETCH_PLANETS}`, {})
       .catch(({ status, message }) => {
         error({ statusCode: status, message })
       }); 

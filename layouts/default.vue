@@ -59,7 +59,7 @@
 
 <script>
 
-import items from '../pages/toolbar.items'
+import items from '../util/toolbar'
 import { mapState } from 'vuex' 
 
 export default {

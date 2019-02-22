@@ -1,3 +1,6 @@
+import { SET_STARSHIPS } from '../util/mutations-types'
+import { FETCH_STARSHIPS } from '../util/actions-types'
+
 export const state = () => ({
   starships: {
     results: [],
@@ -12,13 +15,13 @@ export const getters = {
 }
 
 export const mutations = {
-  setStarships(state, starships) {
+  [SET_STARSHIPS](state, starships) {
     state.starships = starships;
   }
 }
 
 export const actions = {
-  async fetchStarships ({ commit }, { page }) {
+  async [FETCH_STARSHIPS] ({ commit }, { page }) {
     commit('setStarships', await this.$starships.getStarships(page || 1))
   }
 }
