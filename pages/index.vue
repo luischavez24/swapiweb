@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import menus from './toolbar.items'
+import menus from '../util/toolbar'
 import MenuEntry from '../components/MenuEntry'
 import { CHARGE_CURRENT_PAGE_DATA } from '../util/actions-types';
 
