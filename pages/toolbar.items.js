@@ -10,6 +10,12 @@ const toolbarItems = [
     title: 'Planetas',
     to: '/planets',
     detail: 'Todos los planetas de las películas junto con sus datos más importantes.'
+  },
+  {
+    icon: 'fa-fighter-jet',
+    title: 'Naves',
+    to: '/starships',
+    detail: 'Todas las naves de las películas junto con sus datos más importantes. '
   }
 ];
 

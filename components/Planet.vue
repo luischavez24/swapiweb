@@ -20,10 +20,6 @@
           </list-data>
         </v-list>
     </v-card-text>
-    <!-- <v-card-actions>
-      <v-btn flat color="orange">Compartir</v-btn>
-      <v-btn flat color="orange">Explorar</v-btn>
-    </v-card-actions> -->
   </v-card>
 </template>
 

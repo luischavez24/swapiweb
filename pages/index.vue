@@ -27,6 +27,9 @@ export default {
   },
   components: {
     MenuEntry
+  },
+  fetch({ store }) {
+    store.dispatch('chargeCurrentPageData', { title: 'Swapi' })
   }
 }
 </script>

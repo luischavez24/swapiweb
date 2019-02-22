@@ -7,7 +7,6 @@ export const state = () => ({
 
 export const getters = {
   qtyPages(state) {
-    console.log({ state })
     return Math.ceil(state.planets.count / 10)
   }
 }
@@ -19,7 +18,8 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchPlanets ({ commit }, { page }) {
-    commit('setPlanets', await this.$planets.getPlanets(page))
+  async fetchPlanets ({ commit, error }, { page }) {
+    
+    commit('setPlanets', await this.$planets.getPlanets(page || 1))
   }
 }

@@ -43,7 +43,7 @@
         <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
       
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title> {{ title || 'Swapi'}} </v-toolbar-title>
     </v-toolbar>
     <!-- App Toolbar -->
 
@@ -60,6 +60,7 @@
 <script>
 
 import items from '../pages/toolbar.items'
+import { mapState } from 'vuex' 
 
 export default {
   data() {
@@ -70,9 +71,13 @@ export default {
       items,
       miniVariant: false,
       right: true,
-      rightDrawer: false,
-      title: 'Swapi'
+      rightDrawer: false
     }
+  },
+  computed: {
+    ...mapState([
+      'title'
+    ])
   }
 }
 </script>

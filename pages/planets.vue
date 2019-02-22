@@ -47,8 +47,12 @@ export default {
       this.fetchPlanets({ page: this.currentPage })
     }
   },
-  mounted() {
-    this.chargePlanets();
+  fetch({ store, error }) {
+    store.dispatch('chargeCurrentPageData', { title: 'Planetas' })
+    store.dispatch('planets/fetchPlanets', {})
+      .catch(({ status, message }) => {
+        error({ statusCode: status, message })
+      }); 
   }
 }
 </script>
