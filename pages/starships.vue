@@ -8,7 +8,7 @@
     <v-layout mt-3 row wrap justify-center>
       <v-pagination
         v-model="currentPage"
-        :total-visible="10"
+        :total-visible="5"
         :length="qtyPages"
         color="yellow darken-3"
         circle
