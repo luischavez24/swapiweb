@@ -1,10 +1,13 @@
 <template>
-  <div class="error-404 text-xs-center">
-    <h1>Te alejaste mucho de tu destino</h1>
-    <p>
-      La página que estás buscando no existe.
-    </p>
-  </div>
+  <v-layout row wrap>
+    <v-flex justify-center>
+      <h1>Te alejaste mucho de tu destino</h1>
+      <v-icon large>fa-jedi</v-icon>
+      <p>
+        La página que estás buscando no existe.
+      </p>
+    </v-flex>
+  </v-layout>
 </template>
 <script>
 export default {

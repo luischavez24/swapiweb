@@ -2,8 +2,6 @@
   <v-layout
     row
     wrap
-    justify-center
-    align-center
   >
     <v-flex v-for="(entry, index) in menus" :key="index" xs12 sm8 md6 class="px-3 py-3">
       <menu-entry 

@@ -1,7 +1,7 @@
 {
   "name": "swapiweb",
   "version": "1.0.0",
-  "description": "SWAPI Web App diplay all content from swapi.co",
+  "description": "SWAPI Web App display all content from swapi.co",
   "author": "luchor13",
   "private": true,
   "scripts": {

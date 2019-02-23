@@ -24,6 +24,17 @@
             <v-list-tile-title v-text="item.title" />
           </v-list-tile-content>
         </v-list-tile>
+        <v-spacer></v-spacer>
+        <v-list-tile @click.stop="miniVariant = !miniVariant">
+          <v-list-tile-action>
+            <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>
+              Contraer
+            </v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
     <!-- App Menu -->
@@ -35,21 +46,14 @@
       fixed
       app
     >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      
+      <v-toolbar-side-icon @click="drawer = !drawer" /> 
       <v-toolbar-title> {{ title || 'Swapi'}} </v-toolbar-title>
     </v-toolbar>
     <!-- App Toolbar -->
 
     <!-- App Content -->
     <v-content>
-      <v-container>
+      <v-container fill-height>
         <nuxt />
       </v-container>
     </v-content>
